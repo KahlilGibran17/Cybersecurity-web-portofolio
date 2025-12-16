@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahlil Gibran | Cyber Defense & Offensive Security</title>
+    <meta name="description"
+        content="Kahlil Gibran - Cybersecurity Portfolio. SOC Operations, Security Automation, and Pentesting.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">KG<span class="pulse-dot"></span></a>
+            <ul class="nav-links">
+                <li><a href="#about">Ops Intel</a></li>
+                <li><a href="#skills">Capabilities</a></li>
+                <li><a href="#projects">Operations</a></li>
+                <li><a href="#timeline">Log</a></li>
+                <li><a href="#contact" class="nav-btn">Comms Link</a></li>
+                <li>
+                    <div class="threat-toggle-wrapper">
+                        <label class="switch">
+                            <input type="checkbox" id="threatToggle">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="toggle-label">THREAT SIM</span>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-content">
+            <div class="hero-status-panel">
+                <div class="status-item">
+                    <span class="status-label">SECURITY STATUS</span>
+                    <span class="status-value online" id="securityStatus">ONLINE</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">ACTIVE AGENTS</span>
+                    <span class="status-value" id="activeAgents">3</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">THREAT LEVEL</span>
+                    <span class="status-value" id="threatLevel">LOW</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">LAST SYNC</span>
+                    <span class="status-value" id="lastSync">Just now</span>
+                </div>
+            </div>
+
+            <h1 class="glitch-text" data-text="KAHLIL GIBRAN">KAHLIL GIBRAN</h1>
+            <h2 class="hero-subtitle">Cyber Defense & Ethical Security Offensive Enthusiast</h2>
+            <p class="hero-statement">Securing systems while understanding how they break.</p>
+
+            <div class="hero-badges">
+                <span class="badge blue-badge"><i class="fas fa-shield-alt"></i> SOC Operations</span>
+                <span class="badge gold-badge"><i class="fas fa-robot"></i> Security Automation</span>
+                <span class="badge red-badge"><i class="fas fa-bug"></i> Pentesting Practice</span>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Operations</a>
+                <a href="public/pdfs/Muhammad Yusuf Kahlil Gibran-resume (13).pdf" class="btn btn-outline"
+                    download>Download CV <i class="fas fa-download"></i></a>
+            </div>
+        </div>
+        <div class="hero-bg-grid"></div>
+        <canvas id="matrixCanvas"></canvas>
+    </section>
+
+    <!-- Alert Feed Section -->
+    <section id="alerts" class="section alert-section">
+        <div class="container">
+            <div class="alert-feed-header">
+                <h3><i class="fas fa-satellite-dish pulse-icon"></i> LIVE INTELLIGENCE FEED</h3>
+                <span class="live-dot"></span>
+            </div>
+            <div class="alert-feed-container" id="alertFeed">
+                <!-- Alerts injected by JS -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">01.</span> Operational Profile</h2>
+
+            <div class="about-grid">
+                <div class="about-text fade-in-left">
+                    <p>Transitioning from an IT/Development background into the frontline of Cybersecurity. My approach
+                        is dual-natured: deep interest in real-time threat monitoring (Blue Team) and hands-on
+                        adversarial simulation (Red Team).</p>
+                    <p>I aim for entry-level SOC / Blue Team roles where I can leverage my understanding of attack
+                        vectors to build stronger defenses, while continuously leveling up my offensive capabilities in
+                        the lab.</p>
+
+                    <ul class="strengths-list">
+                        <li><i class="fas fa-search-location"></i> SIEM & Endpoint Monitoring</li>
+                        <li><i class="fas fa-cogs"></i> Threat-driven Automation</li>
+                        <li><i class="fas fa-code"></i> API Integrations & Scripting</li>
+                        <li><i class="fas fa-flask"></i> Pentesting Labs / CTF Exploration</li>
+                    </ul>
+                </div>
+
+                <div class="profile-card fade-in-right">
+                    <div class="card-header">
+                        <span class="card-label">CLASSIFIED PROFILE</span>
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div class="card-body">
+                        <div class="profile-photo-placeholder">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div class="profile-details">
+                            <div class="detail-row">
+                                <span class="label">Status:</span>
+                                <span class="value active-status">OPEN FOR SECURITY ROLES</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Location:</span>
+                                <span class="value">Indonesia (Remote Possible)</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="label">Clearance:</span>
+                                <span class="value">Level 1 (Public)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">02.</span> Capabilities Matrix</h2>
+
+            <div class="skills-split">
+                <!-- Blue Team -->
+                <div class="skills-column blue-ops fade-in-up">
+                    <div class="column-header">
+                        <i class="fas fa-shield-virus"></i>
+                        <h3>BLUE TEAM OPS</h3>
+                    </div>
+                    <div class="skill-cards">
+                        <div class="skill-item">
+                            <h4><i class="fas fa-eye"></i> Wazuh SIEM</h4>
+                            <div class="skill-bar">
+                                <div class="fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4><i class="fas fa-file-alt"></i> Sysmon Log Analysis</h4>
+                            <div class="skill-bar">
+                                <div class="fill" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4><i class="fas fa-map"></i> MITRE ATT&CK Mapping</h4>
+                            <div class="skill-bar">
+                                <div class="fill" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4><i class="fas fa-bell"></i> Incident Visibility & Triage</h4>
+                            <div class="skill-bar">
+                                <div class="fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Red Team -->
+                <div class="skills-column red-ops fade-in-up delay-100">
+                    <div class="column-header">
+                        <i class="fas fa-khanda"></i>
+                        <h3>RED TEAM OPS</h3>
+                    </div>
+                    <div class="skill-cards">
+                        <div class="skill-item">
+                            <h4><i class="fas fa-terminal"></i> Pentesting Fundamentals</h4>
+                            <div class="skill-bar">
+                                <div class="fill red-fill" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4><i class="fas fa-globe"></i> Web Exploitation (OWASP)</h4>
+                            <div class="skill-bar">
+                                <div class="fill red-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4><i class="fas fa-network-wired"></i> Recon (Nmap, Burp)</h4>
+                            <div class="skill-bar">
+                                <div class="fill red-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4><i class="fas fa-flag"></i> CTF / Lab Simulations</h4>
+                            <div class="skill-bar">
+                                <div class="fill red-fill" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Automation & Tools -->
+            <div class="tools-section fade-in-up">
+                <h3><i class="fas fa-wrench"></i> Automation & Development Basic</h3>
+                <div class="tools-grid">
+                    <div class="tool-chip"><i class="fab fa-python"></i> Python Scripts</div>
+                    <div class="tool-chip"><i class="fas fa-project-diagram"></i> Node-RED</div>
+                    <div class="tool-chip"><i class="fas fa-link"></i> REST API</div>
+                    <div class="tool-chip"><i class="fab fa-linux"></i> Linux & Windows</div>
+                    <div class="tool-chip"><i class="fab fa-github"></i> Git/GitHub</div>
+                    <div class="tool-chip"><i class="fab fa-docker"></i> Docker Basics</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">03.</span> Mission Log (Projects)</h2>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card fade-in-up">
+                    <div class="project-header">
+                        <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                        <div class="project-links">
+
+                        </div>
+                    </div>
+                    <h3>Wazuh → Telegram Alerting</h3>
+                    <p class="project-desc">Automated High-Severity SIEM alerts delivery system using Node-RED. Filters
+                        signal-to-noise ratio and delivers only actionable intelligence.</p>
+                    <div class="mitre-badges">
+                        <span class="mitre-badge blue-mitre" title="MITRE ATT&CK: Detect"><i class="fas fa-search"></i>
+                            Detect</span>
+                        <span class="mitre-badge gold-mitre" title="Automation"><i class="fas fa-bolt"></i> Auto</span>
+                    </div>
+                    <ul class="project-tech">
+                        <li>Wazuh API</li>
+                        <li>Node-RED</li>
+                        <li>JSON</li>
+                        <li>JWT Auth</li>
+                    </ul>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card fade-in-up delay-100">
+                    <div class="project-header">
+                        <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                        <div class="project-links">
+                            <a href="#" style="pointer-events: none; opacity: 0.5;" aria-label="Confidential"><i
+                                    class="fas fa-lock"></i></a>
+                        </div>
+                    </div>
+                    <h3>External Perimeter Assessment</h3>
+                    <p class="project-desc">Conducted a black-box security assessment for a financial sector client.
+                        Identified service misconfigurations and exposed administrative interfaces, providing actionable
+                        remediation steps to reduce the external attack surface.</p>
+                    <div class="mitre-badges">
+                        <span class="mitre-badge red-mitre"><i class="fas fa-search"></i> Discovery</span>
+                        <span class="mitre-badge red-mitre"><i class="fas fa-shield-alt"></i> Risk Audit</span>
+                        <span class="mitre-badge red-mitre"><i class="fas fa-file-contract"></i> Compliance</span>
+                    </div>
+                    <ul class="project-tech">
+                        <li>Vulnerability Mgmt</li>
+                        <li>Network Security</li>
+                        <li>CVSS Scoring</li>
+                        <li>Reporting</li>
+                    </ul>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card fade-in-up delay-200">
+                    <div class="project-header">
+                        <div class="folder-icon"><i class="far fa-folder-open"></i></div>
+                        <div class="project-links">
+                            <a href="#" style="pointer-events: none; opacity: 0.5;" aria-label="Confidential"><i
+                                    class="fas fa-lock"></i></a>
+                        </div>
+                    </div>
+                    <h3>Internal Application Security Review</h3>
+                    <p class="project-desc">Performed a gray-box security audit of a corporate legacy portal. Uncovered
+                        broken access control (IDOR) vulnerabilities and collaborated with engineering teams to
+                        implement secure RBAC controls.</p>
+                    <div class="mitre-badges">
+                        <span class="mitre-badge red-mitre"><i class="fas fa-code-branch"></i> AppSec</span>
+                        <span class="mitre-badge red-mitre"><i class="fas fa-check-double"></i> Remediation</span>
+                    </div>
+                    <ul class="project-tech">
+                        <li>Web Security</li>
+                        <li>Secure Design</li>
+                        <li>RBAC Analysis</li>
+                        <li>Consulting</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">04.</span> Operational Timeline</h2>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item left fade-in-right">
+                    <div class="timeline-content">
+                        <span class="date">Phase 1</span>
+                        <h3>Wazuh Deployment</h3>
+                        <p>Successful deployment of SIEM infrastructure and initial alert pipeline configuration.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right fade-in-left">
+                    <div class="timeline-content">
+                        <span class="date">Phase 2</span>
+                        <h3>Automation Integration</h3>
+                        <p>First major automation project bridging Wazuh API with Telegram for real-time monitoring.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left fade-in-right">
+                    <div class="timeline-content">
+                        <span class="date">Phase 3</span>
+                        <h3>Offensive Operations</h3>
+                        <p>Deep dive into offensive security, completing key pentesting labs and tool familiarization.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right fade-in-left">
+                    <div class="timeline-content">
+                        <span class="date">Current</span>
+                        <h3>Advanced Synthesis</h3>
+                        <p>Combining Blue and Red team knowledge for holistic security monitoring and detection
+                            engineering.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cyber Terminal Section -->
+    <section id="cyber-terminal" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">04.5.</span> Command Terminal</h2>
+
+            <div class="terminal-window fade-in-up">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title">root@portfolio:~</div>
+                </div>
+                <div class="terminal-body" id="terminalBody">
+                    <div class="terminal-output" id="terminalOutput">
+                        <div class="output-line system-msg">Initializing CyberOS v2.5...</div>
+                        <div class="output-line system-msg">Access granted. Welcome, guest.</div>
+                        <div class="output-line system-msg">Type <span class="cmd-highlight">'help'</span> for available
+                            commands.</div>
+                        <br>
+                    </div>
+                    <div class="terminal-input-area">
+                        <span class="prompt-label">root@portfolio:~$</span>
+                        <span id="inputDisplay"></span><span class="blinking-cursor"></span>
+                        <input type="text" id="terminalInput" class="terminal-input" autocomplete="off"
+                            spellcheck="false" autofocus>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container contact-container">
+            <h2 class="section-title text-center"><span class="section-number">05.</span> Initialize Comms</h2>
+
+            <div class="contact-box fade-in-up">
+                <h3>Ready to secure your infrastructure?</h3>
+                <p>I am currently open to Junior Cybersecurity and SOC Analyst roles. Whether you have a question or
+                    just want to say hi, my inbox is open.</p>
+
+
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kahlil-gibran-4b489b1ab/" class="social-icon"
+                        aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/KahlilGibran17" class="social-icon" aria-label="GitHub" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://tryhackme.com/p/KahlilGibran" class="social-icon" aria-label="TryHackMe"
+                        target="_blank" rel="noopener noreferrer"><i class="fas fa-cube"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-satellite-dish"></i>
+                <h3>TRANSMISSION RECEIVED</h3>
+            </div>
+            <p>Message sequence initiated. I will acknowledge your signal shortly.</p>
+            <div class="modal-code">
+                <span>Status: DELIVERED</span>
+                <span>Ack: PENDING</span>
+            </div>
+            <button class="btn btn-primary" onclick="closeModal()">Close Connection</button>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kahlil Gibran. All Systems Secured.</p>
+            <p class="tech-stack">Built with HTML5, CSS3, Vanilla JS</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
