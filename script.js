@@ -177,9 +177,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Map existing project titles to PDF filenames
     // Note: Titles must match the index.html content (or use includes)
     const pdfMapping = {
-        'Wazuh → Telegram Alerting': 'public/pdfs/SIEM Alert Automation.pdf',
-        'External Perimeter Assessment': 'public/pdfs/External Permieter Assesment.pdf',
-        'Internal Application Security Review': 'public/pdfs/Internal_Application_Security_Review.pdf'
+        'Wazuh → Telegram Alerting': 'SIEM Alert Automation.pdf',
+        'External Perimeter Assessment': 'External Permieter Assesment.pdf',
+        'Internal Application Security Review': 'Internal_Application_Security_Review.pdf'
     };
 
     projectCards.forEach(card => {
